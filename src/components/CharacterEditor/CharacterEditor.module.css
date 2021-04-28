@@ -6,9 +6,7 @@
   position: relative;
 }
 
-.maxWidthWrapper {
-  /* max-width: 65%; */
-}
+
 
 .header {
   padding-bottom: 64px;
@@ -39,4 +37,36 @@
 
 .controlColumn {
   width: 50%;
+}
+
+@media (max-width: 768px) {
+  .header {
+    width: 100%;
+  }
+  .controlColumn {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    overflow-x: scroll;
+  }
+
+  .controlColumn > div {
+    min-width: 100%;
+  }
+
+  .characterWrapper {
+    position: absolute;
+    max-height: 80vh;
+    top: 30%;
+    left: 0;
+  }
+
+  .characterEditor {
+    width: 100%;
+  }
+
+  .maxWidthWrapper {
+    max-width: 100%;
+  }
 }
